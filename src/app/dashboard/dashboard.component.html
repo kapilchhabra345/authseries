@@ -1,0 +1,70 @@
+<h1>dashboard works!</h1>
+
+
+<div class="continer">
+    <div class="row fbox">
+        <div class="col-md-5 align-self-center">
+                <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+                    <p>Add Emplyee</p>
+                    <hr>
+                <div class="form-group input-group">
+                    <span class="input-group-text" > Enter name</span>
+                   <input type="text" class="form-control" placeholder="Enter name" formControlName="name" >
+                    <!-- <small *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched" class="form-text text-danger w-100">Please Enter Email</small> -->
+                  </div>
+                  <div class="form-group input-group">
+                    <span class="input-group-text" >Enter Designation</span>
+                    <input type="text" class="form-control" placeholder="Enter Designation" formControlName="designation">
+                    <!-- <small *ngIf="!myReactiveForm.get('password').valid && myReactiveForm.get('password').touched" class="form-text text-danger w-100">Please Enter Password</small> -->
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block btn btn-outline-primary">Submit</button>
+                </div>
+            
+            </form>
+        </div>
+      </div>
+
+   <div class="col-md-12">
+        <div class="view-bar d-flex align-item-center text-right bg-light">
+           <h5 class="mr-auto">Welcome, {{user.displayName? user.displayName: 'User'}}</h5>
+           <a (click)="listViewActive = true"><i class="fa fa-list"></i></a>
+           <a (click)="listViewActive = false"><i class="fa fa-th-large"></i></a>
+        </div>
+   </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+              <div class="col-md-3">
+                  <!-- <image src=""></image> -->
+              </div>
+              <div class="col-md-3">
+                   <table>
+                       <thead>
+                        <tr *ngFor="let item of empData">
+                            <td>Name:{{item.name}}</td>
+                            <td>Designation:{{item.designation}}</td>
+                        </tr>
+                       </thead>        
+                   </table>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

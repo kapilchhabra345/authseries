@@ -1,0 +1,40 @@
+ nav{
+    background-color: #8080803b;
+    position: relative;
+    height:50px;
+    
+}
+
+.flex-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Dropdown styles */
+
+.menu ul {
+    position: absolute;
+    list-style: none;
+    padding-right: 150px;
+   
+}
+
+.menu ul a {
+    white-space: nowrap;
+    
+   
+}
+
+
+
+/*  close*/
+
+.ccc:hover .ddd {
+    display: block;
+  }
+  
+  .ddd {
+    display: none;
+  }
+
+
